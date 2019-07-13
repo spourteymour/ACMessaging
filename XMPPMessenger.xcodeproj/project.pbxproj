@@ -22,6 +22,7 @@
 		6900AA2622D95DC1009BD879 /* ConnectionInformation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6900AA2522D95DC1009BD879 /* ConnectionInformation.plist */; };
 		69060A0A22DA09F2000587C4 /* UserCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69060A0922DA09F2000587C4 /* UserCredential.swift */; };
 		69060A0C22DA1E0B000587C4 /* MultiCast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69060A0B22DA1E0B000587C4 /* MultiCast.swift */; };
+		69060A0E22DA317D000587C4 /* ACChatPresence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69060A0D22DA317D000587C4 /* ACChatPresence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		6900AA2522D95DC1009BD879 /* ConnectionInformation.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ConnectionInformation.plist; sourceTree = "<group>"; };
 		69060A0922DA09F2000587C4 /* UserCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredential.swift; sourceTree = "<group>"; };
 		69060A0B22DA1E0B000587C4 /* MultiCast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiCast.swift; sourceTree = "<group>"; };
+		69060A0D22DA317D000587C4 /* ACChatPresence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACChatPresence.swift; sourceTree = "<group>"; };
 		B4EBBB67DFFCE2A4B73A149B /* Pods-XMPPMessenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMPPMessenger.release.xcconfig"; path = "Target Support Files/Pods-XMPPMessenger/Pods-XMPPMessenger.release.xcconfig"; sourceTree = "<group>"; };
 		F9D86AC55D0094631FB12C86 /* Pods_XMPPMessenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XMPPMessenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -136,6 +138,7 @@
 				6900A9F922D953E7009BD879 /* Info.plist */,
 				6900AA1B22D95529009BD879 /* CommunicationManager.swift */,
 				69060A0B22DA1E0B000587C4 /* MultiCast.swift */,
+				69060A0D22DA317D000587C4 /* ACChatPresence.swift */,
 				6900AA2522D95DC1009BD879 /* ConnectionInformation.plist */,
 				6900AA1F22D956C3009BD879 /* Message.swift */,
 				6900AA2122D95709009BD879 /* Image.swift */,
@@ -368,6 +371,7 @@
 				6900AA1C22D95529009BD879 /* CommunicationManager.swift in Sources */,
 				6900A9EE22D953E3009BD879 /* AppDelegate.swift in Sources */,
 				69060A0A22DA09F2000587C4 /* UserCredential.swift in Sources */,
+				69060A0E22DA317D000587C4 /* ACChatPresence.swift in Sources */,
 				6900AA2222D95709009BD879 /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

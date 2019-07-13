@@ -15,14 +15,25 @@ enum XMPPControllerError: Error {
 
 //previously ChatDelegate
 protocol XMPPManagerDelegate: class {
-    //    func buddyWentOnline(name: String)
-    //    func buddyWentOffline(name: String)
-    //    func messageReceivedFromUser(userId:String, messageContent:Dictionary<String,AnyObject>)
+    var id: String {get}
+    
     func didReceive(message:Message)
     
-    var id: String {get}
-    //    func didDisconnect()
+    func didConnect(to host: String)
+    func didDisconnect(from host: String, error: Error?)
+
+    func didTimeOut(from host: String)
+    func didReceiveError(error: Error)
     
+    func didRegister(with host: String)
+    func didAuthenticate(with host: String)
+    
+    func didReceiveIQ(iq: XMPPIQ)
+    func didReceivePresence(presence: ACChatPresence)
+    func didReceiveRosterItem(item: DDXMLElement, fromRoster roster: XMPPRoster)
+    func didReceiveMessage(message: Message)
+    
+    func didSendMessage(message: Message)
 }
 
 let dummyHostServer = "vps395261.ovh.net"
@@ -202,6 +213,7 @@ class CommunicationManager: NSObject {
         }
         print(msg)
         xmppStream.send(msg)
+        delegates.invoke{$0.didSendMessage(message: message)}
 //        saveSentMessage(message: message)
     }
 }
@@ -209,11 +221,24 @@ class CommunicationManager: NSObject {
 
 extension CommunicationManager: XMPPStreamDelegate {
     //MARK: XMPP Callback Methods
+    
+    fileprivate func getCombinedHostName(from stream: XMPPStream) -> String {
+        var toRet = ""
+        if let name = stream.hostName {
+            let port = String(describing: stream.hostPort)
+            toRet = String(format: "%@: %@", name, port )
+        }
+        return toRet
+    }
+    
     func xmppStreamDidConnect(sender: XMPPStream!) {
         guard let cred = credentials, let password = cred.hashedPassword else {
             disconnect()
             return
         }
+        
+        delegates.invoke{$0.didConnect(to: getCombinedHostName(from: sender))}
+        
         do {
             try xmppStream.authenticate(withPassword: password)
         } catch {
@@ -222,26 +247,31 @@ extension CommunicationManager: XMPPStreamDelegate {
     }
     
     func xmppStreamWasTold(toDisconnect sender: XMPPStream) {
-        print("timeout")
+        delegates.invoke{$0.didDisconnect(from: getCombinedHostName(from: sender), error: nil)}
     }
     
     func xmppStreamDidDisconnect(_ sender: XMPPStream, withError error: Error?) {
-        print("disconnected with error: \(String(describing: error))")
+        delegates.invoke{$0.didDisconnect(from: getCombinedHostName(from: sender), error: error)}
     }
     
     func xmppStreamConnectDidTimeout(_ sender: XMPPStream) {
+        delegates.invoke{$0.didTimeOut(from: getCombinedHostName(from: sender))}
         print("timeout")
     }
     
     func xmppStreamDidRegister(_ sender: XMPPStream) {
+        delegates.invoke{$0.didRegister(with: getCombinedHostName(from: sender))}
         print("Registered Successfully")
     }
     
     func xmppStreamDidAuthenticate(_ sender: XMPPStream) {
+        delegates.invoke{$0.didAuthenticate(with: getCombinedHostName(from: sender))}
         goOnline()
     }
     
     func xmppStream(sender: XMPPStream!, didReceiveIQ iq: XMPPIQ!) -> Bool {
+        //TODO: Do something about the IQ
+        delegates.invoke{$0.didReceiveIQ(iq: iq)}
         print("Did receive IQ")
         return false
     }
@@ -261,10 +291,13 @@ extension CommunicationManager: XMPPStreamDelegate {
                 //                delegate.buddyWentOffline(name: "\(presenceFromUser)@gmail.com")
             }
         }
+        let presence = ACChatPresence(type: presence.type, show: presence.show, status: presence.status, priority: presence.priority, availability: ACChatPresenceAvailability.withXMPPPresence(presence: presence))
+        delegates.invoke{$0.didReceivePresence(presence: presence)}
     }
     
     func xmppRoster(sender: XMPPRoster!, didReceiveRosterItem item: DDXMLElement!) {
         print("Did receive Roster item: \(String(describing: item))")
+        delegates.invoke{ $0.didReceiveRosterItem(item: item, fromRoster: sender)}
     }
     
     //MARK: Send and Receive Message
