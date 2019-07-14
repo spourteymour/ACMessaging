@@ -25,11 +25,13 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'S Pourtaymour' => 'sepand_pourteymour@live.co.uk' }
-  s.source           = { :git => 'https://github.com/spourteymour/ACMessaging.git', :branch => 'add/createFramework', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/spourteymour/ACMessaging.git', :branch => 'master'}
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  spec.module_name   = 'ACChat'
+  spec.swift_version = '4.0'
 
   s.ios.deployment_target = '8.0'
-  s.dependency 'XMPPFramework' = {:git=> 'git@github.com:robbiehanson/XMPPFramework.git', :branch => 'master'}
+#  s.dependency 'XMPPFramework' = {:git=> 'git@github.com:robbiehanson/XMPPFramework.git', :branch => 'master'}
 
   s.source_files = 'XMPPMessenger/*.swift'
   

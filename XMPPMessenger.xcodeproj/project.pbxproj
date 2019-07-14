@@ -23,6 +23,7 @@
 		69060A0A22DA09F2000587C4 /* UserCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69060A0922DA09F2000587C4 /* UserCredential.swift */; };
 		69060A0C22DA1E0B000587C4 /* MultiCast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69060A0B22DA1E0B000587C4 /* MultiCast.swift */; };
 		69060A0E22DA317D000587C4 /* ACChatPresence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69060A0D22DA317D000587C4 /* ACChatPresence.swift */; };
+		69060B1822DB8DE0000587C4 /* ACChat.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 69060B1722DB8DE0000587C4 /* ACChat.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +59,6 @@
 		6900AA0D22D953E7009BD879 /* XMPPMessengerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMPPMessengerUITests.swift; sourceTree = "<group>"; };
 		6900AA0F22D953E7009BD879 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6900AA1B22D95529009BD879 /* CommunicationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationManager.swift; sourceTree = "<group>"; };
-		6900AA1E22D9560C009BD879 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		6900AA1F22D956C3009BD879 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		6900AA2122D95709009BD879 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		6900AA2322D957E6009BD879 /* ClientInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientInformation.swift; sourceTree = "<group>"; };
@@ -66,6 +66,7 @@
 		69060A0922DA09F2000587C4 /* UserCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredential.swift; sourceTree = "<group>"; };
 		69060A0B22DA1E0B000587C4 /* MultiCast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiCast.swift; sourceTree = "<group>"; };
 		69060A0D22DA317D000587C4 /* ACChatPresence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACChatPresence.swift; sourceTree = "<group>"; };
+		69060B1722DB8DE0000587C4 /* ACChat.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = ACChat.podspec; sourceTree = "<group>"; };
 		B4EBBB67DFFCE2A4B73A149B /* Pods-XMPPMessenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMPPMessenger.release.xcconfig"; path = "Target Support Files/Pods-XMPPMessenger/Pods-XMPPMessenger.release.xcconfig"; sourceTree = "<group>"; };
 		F9D86AC55D0094631FB12C86 /* Pods_XMPPMessenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XMPPMessenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -107,7 +108,7 @@
 		6900A9E122D953E3009BD879 = {
 			isa = PBXGroup;
 			children = (
-				6900AA1E22D9560C009BD879 /* Podfile */,
+				69060B1722DB8DE0000587C4 /* ACChat.podspec */,
 				6900A9EC22D953E3009BD879 /* XMPPMessenger */,
 				6900AA0122D953E7009BD879 /* XMPPMessengerTests */,
 				6900AA0C22D953E7009BD879 /* XMPPMessengerUITests */,
@@ -283,6 +284,7 @@
 			files = (
 				6900A9F822D953E7009BD879 /* LaunchScreen.storyboard in Resources */,
 				6900A9F522D953E7009BD879 /* Assets.xcassets in Resources */,
+				69060B1822DB8DE0000587C4 /* ACChat.podspec in Resources */,
 				6900A9F322D953E3009BD879 /* Main.storyboard in Resources */,
 				6900AA2622D95DC1009BD879 /* ConnectionInformation.plist in Resources */,
 			);
