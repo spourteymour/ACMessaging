@@ -33,7 +33,7 @@ A short description of ACChat. It is a simple to use XMPP messaging sdk with cus
   s.ios.deployment_target = '8.0'
 #  s.dependency 'XMPPFramework'
 
-  s.source_files = 'XMPPMessenger/**/*.swift'
+  s.source_files = 'XMPPMessenger/*.swift'
   
   # s.resource_bundles = {
   #   'ACChat' => ['ACChat/Assets/*.png']
