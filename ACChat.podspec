@@ -25,7 +25,9 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'S Pourtaymour' => 'sepand_pourteymour@live.co.uk' }
-  s.source           = { :git => 'https://github.com/spourteymour/ACMessaging.git', :branch => 'master'}
+  s.source           = { :git => 'https://github.com/spourteymour/ACMessaging.git',
+      :branch => 'master',
+      :tag => 'v-0.1.0-first-tag' }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   s.module_name   = 'ACChat'
   s.swift_version = '4.0'
