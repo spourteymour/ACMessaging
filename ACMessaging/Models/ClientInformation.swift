@@ -42,7 +42,7 @@ struct ClientInformation {
             }
         }
         guard let finalUrl = urlToUse, let plistData = try? Data(contentsOf: finalUrl),
-            let plistDictionary = try? PropertyListSerialization.propertyList(from: plistData, options: .mutableContainersAndLeaves, format: &propertyListFormat) as? [String: String],
+            let plistDictionary = try? PropertyListSerialization.propertyList(from: plistData, options: .mutableContainersAndLeaves, format: &propertyListFormat) as! [String: String],
             let serverURLString = plistDictionary["host_name"],
             let portString = plistDictionary["host_port"],
             let port = UInt16(portString) else {

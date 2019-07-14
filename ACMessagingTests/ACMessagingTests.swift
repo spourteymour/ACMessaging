@@ -1,15 +1,15 @@
 //
-//  XMPPMessengerTests.swift
-//  XMPPMessengerTests
+//  ACMessagingTests.swift
+//  ACMessagingTests
 //
-//  Created by Sepandat Pourtaymour on 13/07/2019.
+//  Created by Sepandat Pourtaymour on 14/07/2019.
 //  Copyright © 2019 Sepandat Pourtaymour. All rights reserved.
 //
 
 import XCTest
-@testable import XMPPMessenger
+@testable import ACMessaging
 
-class XMPPMessengerTests: XCTestCase {
+class ACMessagingTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

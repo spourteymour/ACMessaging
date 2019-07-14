@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'ACChat'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of ACChat.'
+  s.summary          = 'A short description of ACChat. It is a simple to use XMPP messaging sdk with customisable key mapping'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,18 +18,21 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+A short description of ACChat. It is a simple to use XMPP messaging sdk with customisable key mapping
                        DESC
 
-  s.homepage         = 'https://github.com/S Pourtaymour/ACChat'
+  s.homepage         = 'https://github.com/spourteymour/ACMessaging'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+ s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'S Pourtaymour' => 'sepand_pourteymour@live.co.uk' }
-  s.source           = { :git => 'https://github.com/spourteymour/ACMessaging.git', :branch => 'add/createFramework', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/spourteymour/ACMessaging.git',
+      :tag => 'v-0.1.0-first-tag' }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.module_name   = 'ACChat'
+  s.swift_version = '4.0'
 
   s.ios.deployment_target = '8.0'
-  s.dependency 'XMPPFramework' = {:git=> 'git@github.com:robbiehanson/XMPPFramework.git', :branch => 'master'}
+  s.dependency 'XMPPFramework'
 
   s.source_files = 'XMPPMessenger/*.swift'
   

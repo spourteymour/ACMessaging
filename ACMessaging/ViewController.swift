@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  XMPPMessenger
+//  ACMessaging
 //
-//  Created by Sepandat Pourtaymour on 13/07/2019.
+//  Created by Sepandat Pourtaymour on 14/07/2019.
 //  Copyright © 2019 Sepandat Pourtaymour. All rights reserved.
 //
 
