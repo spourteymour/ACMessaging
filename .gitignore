@@ -1,4 +1,5 @@
-XMPPMessenger.xcodeproj/xcshareddata/
-XMPPMessenger.xcworkspace/xcshareddata/
 R.generated.swift
 Pods/
+
+xcuserdata/
+xcshareddata/
