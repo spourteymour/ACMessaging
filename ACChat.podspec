@@ -34,6 +34,10 @@ A short description of ACChat. It is a simple to use XMPP messaging sdk with cus
   s.ios.deployment_target = '8.0'
   s.dependency 'XMPPFramework'
 
+  s.subspec 'XMPPFramework' do |mySubLib|
+      s.source           = { :git => "https://github.com/robbiehanson/XMPPFramework", :tag => '4.0.0' }
+  end
+
   s.source_files = 'XMPPMessenger/*.swift'
   
   # s.resource_bundles = {
