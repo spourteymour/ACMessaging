@@ -35,6 +35,11 @@ A short description of ACChat. It is a simple to use XMPP messaging sdk with cus
 
   s.source_files = 'ACMessaging/**/*.swift'
   
+  s.vendored_frameworks =
+  s.vendored_frameworks =
+  s.vendored_frameworks =
+  s.vendored_frameworks =
+  
   # s.resource_bundles = {
   #   'ACChat' => ['ACChat/Assets/*.png']
   # }

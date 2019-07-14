@@ -66,6 +66,16 @@
 		69060B9522DBABDF000587C4 /* ClientInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientInformation.swift; sourceTree = "<group>"; };
 		69060B9622DBABDF000587C4 /* ACChat.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = ACChat.podspec; sourceTree = "<group>"; };
 		69060B9722DBABDF000587C4 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		69060BAA22DBD5ED000587C4 /* KissXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KissXML.framework; sourceTree = "<group>"; };
+		69060BAB22DBD5ED000587C4 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaAsyncSocket.framework; sourceTree = "<group>"; };
+		69060BAC22DBD5EE000587C4 /* XMPPFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XMPPFramework.framework; sourceTree = "<group>"; };
+		69060BAD22DBD5EE000587C4 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = "<group>"; };
+		69060BAE22DBD5EE000587C4 /* libidn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libidn.framework; sourceTree = "<group>"; };
+		69060BAF22DBD65B000587C4 /* XMPPFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XMPPFramework.framework; sourceTree = "<group>"; };
+		69060BB022DBD65B000587C4 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaAsyncSocket.framework; sourceTree = "<group>"; };
+		69060BB122DBD65B000587C4 /* KissXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KissXML.framework; sourceTree = "<group>"; };
+		69060BB222DBD65B000587C4 /* libidn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libidn.framework; sourceTree = "<group>"; };
+		69060BB322DBD65C000587C4 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +127,7 @@
 		69060B5E22DBAB83000587C4 /* ACMessaging */ = {
 			isa = PBXGroup;
 			children = (
+				69060BA722DBD5BC000587C4 /* Dependencies */,
 				69060BA522DBB0A7000587C4 /* Resources */,
 				69060BA422DBB068000587C4 /* Models */,
 				69060B8D22DBABDE000587C4 /* CommunicationManager.swift */,
@@ -168,6 +179,39 @@
 				69060B6B22DBAB84000587C4 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		69060BA722DBD5BC000587C4 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				69060BA922DBD5D4000587C4 /* Device */,
+				69060BA822DBD5C5000587C4 /* Simulator */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		69060BA822DBD5C5000587C4 /* Simulator */ = {
+			isa = PBXGroup;
+			children = (
+				69060BB022DBD65B000587C4 /* CocoaAsyncSocket.framework */,
+				69060BB322DBD65C000587C4 /* CocoaLumberjack.framework */,
+				69060BB122DBD65B000587C4 /* KissXML.framework */,
+				69060BB222DBD65B000587C4 /* libidn.framework */,
+				69060BAF22DBD65B000587C4 /* XMPPFramework.framework */,
+			);
+			path = Simulator;
+			sourceTree = "<group>";
+		};
+		69060BA922DBD5D4000587C4 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				69060BAB22DBD5ED000587C4 /* CocoaAsyncSocket.framework */,
+				69060BAD22DBD5EE000587C4 /* CocoaLumberjack.framework */,
+				69060BAA22DBD5ED000587C4 /* KissXML.framework */,
+				69060BAE22DBD5EE000587C4 /* libidn.framework */,
+				69060BAC22DBD5EE000587C4 /* XMPPFramework.framework */,
+			);
+			path = Device;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
