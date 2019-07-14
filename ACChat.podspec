@@ -26,7 +26,7 @@ A short description of ACChat. It is a simple to use XMPP messaging sdk with cus
  s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'S Pourtaymour' => 'sepand_pourteymour@live.co.uk' }
   s.source           = { :git => 'https://github.com/spourteymour/ACMessaging.git',
-      :tag => 'v-0.1.0-first-tag' }
+      :tag => 'experimental-framework-0.1.4' }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   s.module_name   = 'ACChat'
   s.swift_version = '4.0'
