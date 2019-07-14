@@ -18,12 +18,12 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+A short description of ACChat. It is a simple to use XMPP messaging sdk with customisable key mapping
                        DESC
 
-  s.homepage         = 'https://github.com/spourteymour/ACMessaging.git'
+  s.homepage         = 'https://github.com/spourteymour/ACMessaging'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+ s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'S Pourtaymour' => 'sepand_pourteymour@live.co.uk' }
   s.source           = { :git => 'https://github.com/spourteymour/ACMessaging.git',
       :branch => 'master',
